@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="<%= htmlWebpackPlugin.options.productDescription %>">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width<% if (htmlWebpackPlugin.options.ctx.mode.cordova) { %>, viewport-fit=cover<% } %>">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: file: cdvfile: 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src * data: ; connect-src *; script-src 'self' https://restapi.amap.com https://webapi.amap.com blob: 'unsafe-eval' 'nonce-R4nd0m' "/>-->
+
+    <title><%= htmlWebpackPlugin.options.productName %></title>
+
+    <link rel="icon" href="statics/quasar-logo.png" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="statics/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="statics/icons/favicon-16x16.png">
+
+    <script type="text/javascript" nonce="R4nd0m">
+      var handleOpenURL = function(url) {
+        console.log("openAs ..... " + url)
+        window.localStorage.setItem("external_load", url);
+      };
+      // 禁用长按弹出菜单
+      window.addEventListener('contextmenu', function (e) {
+        e.preventDefault()
+      })
+    </script>
+    <style>
+      * {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select:none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+
+        -webkit-overflow-scrolling: touch;
+      }
+      input {
+        -webkit-user-select: auto;
+      }
+
+    </style>
+  </head>
+  <body>
+    <noscript>
+      This is your fallback content in case JavaScript fails to load.
+    </noscript>
+
+    <!-- DO NOT touch the following <div> -->
+    <div id="q-app"></div>
+
+    <!-- built files will be auto injected here -->
+  </body>
+</html>
