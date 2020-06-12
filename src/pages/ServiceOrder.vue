@@ -87,7 +87,7 @@
               <q-input v-model="serviceOrder.supplierOrderId" clearable/>
             </q-tab-pane>
         </q-tabs>
-        <q-modal minimized v-model="showServiceOrderList">
+        <q-dialog minimized v-model="showServiceOrderList">
           <div class="padding_10 min_height_300 text_align_center">
             <div class="iconfont icon-huiyuan text_align_center padding_top_10 padding_bottom_10 font_size_30"></div>
 
@@ -104,8 +104,8 @@
               <p class="width_25_p padding_10">{{serviceOrder.status}}</p>
             </div>
           </div>
-        </q-modal>
-        <q-modal minimized v-model="showVipList">
+        </q-dialog>
+        <q-dialog minimized v-model="showVipList">
           <div class="padding_10 min_height_300 text_align_center">
             <div class="iconfont icon-huiyuan text_align_center padding_top_10 padding_bottom_10 font_size_30"></div>
 
@@ -122,7 +122,7 @@
             </div>
             </div>
           </div>
-        </q-modal>
+        </q-dialog>
     </q-page>
 </template>
 

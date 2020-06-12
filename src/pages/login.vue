@@ -67,7 +67,7 @@
     </q-dialog>
 
     <!--forget password-->
-    <q-modal class="height_100_p width_100_p " v-model="showForgetPassword">
+    <q-dialog class="height_100_p width_100_p " v-model="showForgetPassword">
       <div class="height_20_p width_100_p "></div>
 
 
@@ -113,7 +113,7 @@
       </div>
 
 
-    </q-modal>
+    </q-dialog>
 
 
   </div>
@@ -273,14 +273,14 @@
         });
       },
       showAlert() {
-        this.$q.notify({
-          color: 'orange',
-          message: 'function is developing',
-          position: 'top',
-          icon: 'warning',
-          actions: [{label: 'Reply', handler: () => console.log('Clicked on a notification handler')}],
-          timeout: 500
-        })
+        // this.$q.notify({
+        //   color: 'orange',
+        //   message: 'function is developing',
+        //   position: 'top',
+        //   icon: 'warning',
+        //   actions: [{label: 'Reply', handler: () => console.log('Clicked on a notification handler')}],
+        //   timeout: 500
+        // })
       },
     },
     watch: {
@@ -290,11 +290,6 @@
         this.$i18n.locale = lang;
         this.$i18n.silentTranslationWarn = true;
         console.log(this.$i18n.locale);
-
-        // 动态导入，因此只按需求加载
-        import(`quasar-framework/i18n/${lang}`).then(lang => {
-          this.$q.i18n.set(lang.default)
-        })
       }
     },
 

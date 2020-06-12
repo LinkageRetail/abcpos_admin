@@ -10,19 +10,23 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@quasar/extras": "^1.8.2",
     "axios": "^0.18.1",
     "echarts": "^4.2.1",
     "nan": "^2.14.0",
     "pdfjs-dist": "^2.1.266",
+    "quasar": "^1.12.4",
     "vue-amap": "^0.5.10",
     "vue-i18n": "^7.3.3",
-    "vue-social-sharing": "^2.4.5",
-    "vuex-persistedstate": "^2.5.4"
+    "vuex-persistedstate": "^3.0.1"
   },
   "devDependencies": {
-    "quasar-cli": "^0.17.26",
-    "strip-ansi": "^3.0.1",
-    "vue-template-compiler": "2.6.10"
+    "@quasar/app": "^1.9.6",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.10.0",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-vue": "^5.0.0"
   },
   "engines": {
     "node": ">= 8.9.0",

@@ -1,0 +1,48 @@
+// app global css in Sass form
+html,body
+    font-family: arial,sans-serif
+.icon 
+    width: 1em
+    height: 1em
+    vertical-align: -0.15em
+    fill: currentColor
+    overflow: hidden
+
+.font-weight
+    font-weight: bold
+.font12
+    font-size: 12px
+.bg
+  width: 100%
+  height: 80px
+  text-align: center
+  line-height: 80px
+  font-size: 24px
+  font-weight: bold
+
+.my-sticky-header-table
+  /* max height is important */
+  .q-table__middle
+    max-height: 200px
+
+  thead tr th
+    position: sticky
+    z-index: 1
+    color: #fff
+    font-weight: bold
+    opacity: 1!important
+  thead tr:first-child th
+    top: 0
+
+  /* this is when the loading indicator appears */
+  &.q-table--loading thead tr:last-child th
+    /* height of all previous header rows */
+    top: 48px
+
+.close-filter
+  position: absolute
+  right: 10px
+  top: 10px
+
+.q-dialog__message
+  opacity: 1

@@ -73,10 +73,10 @@ export default ({router, store, Vue}) => {
       // });
       }
     }else{
-      Vue.prototype.$q.notify({
-        message: '無法訪問服務器，請重試',
-        position: 'center'
-      });
+      // Vue.prototype.$q.notify({
+      //   message: '無法訪問服務器，請重試',
+      //   position: 'center'
+      // });
     }
     return Promise.reject(error.response.data)   // 返回接口返回的错误信息
   });
